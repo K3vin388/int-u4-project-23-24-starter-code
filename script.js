@@ -79,5 +79,3 @@ villan.addEventListener("click",function(){
     maxDillon+= 1;
     result.style.display = "block";
 })
-
-
