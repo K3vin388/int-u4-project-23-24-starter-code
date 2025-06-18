@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     color: #333;
     line-height: 1.6;
     padding: 20px;
@@ -14,24 +14,31 @@ body {
 }
 
 /* Questions section styling */
-.questions {
-    background-color: #fff;
+.page-one {
+    background-color:lightblue;
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+img{
+    border-radius: 20px;
+    padding:50px;
+    width:400px;
+    height:400px;
+}
+
 
 .questions h4 {
     color: #666;
 }
 
-.questions img {
-    width: 100%; /* Make images responsive */
-    height: auto;
-    border-radius: 8px;
-    margin-top: 10px;
-}
+/* .questions img {
+  *  width: 100%; /
+  *  height: auto;
+   * border-radius: 8px;
+   * margin-top: 10px;
+} */
 
 /* Result section styling */
 .result {
