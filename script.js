@@ -15,12 +15,13 @@ let seven = document.querySelector(".image-seven");
 let eight = document.querySelector(".image-eight");
 let nine = document.querySelector(".image-nine");
 let ten = document.querySelector(".image-ten");
+let resultBtn = document.querySelector(".result-button")
 let flash=0;
 let thor=0;
 let blackFlash=0;
 let maxDillon=0;
 
-
+resultBtn.style.display = "none";
 seven.style.display = "none";
 eight .style.display = "none";
 nine.style.display = "none";
@@ -32,9 +33,6 @@ result.style.display = "none";
 
 buttonOne.addEventListener("click",function(){
     
-    superSpeed = true;
-    controlLighting = true;
-    console.log(superSpeed);
     pageOne.style.display = "block";
     pageTwo.style.display = "none";
     title.style.display = "none";
@@ -73,9 +71,25 @@ superHero.addEventListener("click" ,function(){
     flash+= 1;
     thor+=1;
     result.style.display = "block";
+    resultBtn.style.display = "block";
 })
 villan.addEventListener("click",function(){
-    blackFlash+= 1;
-    maxDillon+= 1;
+    blackFlash += 1;
+    maxDillon += 1;
     result.style.display = "block";
-})
+    resultBtn.style.display = "block";
+}) 
+resultBtn.addEventListener("click" , function (){
+    if (flash >= thor && flash >= blackFlash && flash >=  maxDillon){
+    eight.style.display = "block";
+}
+    else if (thor >=flash && thor >= blackFlash && thor >= maxDillon){
+    seven.style.display = "block";
+} 
+    else if (blackFlash >= thor && blackFlash >= maxDillon && blackFlash >= flash){
+    nine.style.display = "block";
+}
+    else if (maxDillon >= thor && maxDillon >= flash && maxDillon >= blackFlash){
+    ten.style.display = "block";}
+     
+});
