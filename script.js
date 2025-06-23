@@ -15,12 +15,14 @@ let seven = document.querySelector(".image-seven");
 let eight = document.querySelector(".image-eight");
 let nine = document.querySelector(".image-nine");
 let ten = document.querySelector(".image-ten");
+let eleven = document.querySelector(".image-demon")
 let resultBtn = document.querySelector(".result-button")
 let flash=0;
 let thor=0;
 let blackFlash=0;
 let maxDillon=0;
-
+let demon=0;
+eleven.style.display = "none";
 resultBtn.style.display = "none";
 seven.style.display = "none";
 eight .style.display = "none";
@@ -41,6 +43,7 @@ buttonOne.addEventListener("click",function(){
 
 sonic.addEventListener("click",function(){
     flash += 1;
+    demon += 1;
     blackFlash +=1;
     pageTwo.style.display = "block";
     pageOne.style.display = "none";
@@ -62,6 +65,7 @@ blue.addEventListener("click" , function(){
 red.addEventListener("click" ,function (){
     flash+= 1;
     thor+=1;
+    demon+=1;
      pageThree.style.display = "block";
     pageTwo.style.display = "none";
     pageOne.style.display = "none";
@@ -75,21 +79,24 @@ superHero.addEventListener("click" ,function(){
 })
 villan.addEventListener("click",function(){
     blackFlash += 1;
+    demon +=1;
     maxDillon += 1;
     result.style.display = "block";
     resultBtn.style.display = "block";
 }) 
 resultBtn.addEventListener("click" , function (){
-    if (flash >= thor && flash >= blackFlash && flash >=  maxDillon){
+    if (flash >= thor && flash >= blackFlash && flash >=  maxDillon && flash >= maxDillon){
     eight.style.display = "block";
 }
-    else if (thor >=flash && thor >= blackFlash && thor >= maxDillon){
+    else if (thor >=flash && thor >= blackFlash && thor >= maxDillon && thor >= demon){
     seven.style.display = "block";
 } 
-    else if (blackFlash >= thor && blackFlash >= maxDillon && blackFlash >= flash){
+    else if (blackFlash >= thor && blackFlash >= maxDillon && blackFlash >= flash && blackFlash >= demon){
     nine.style.display = "block";
 }
     else if (maxDillon >= thor && maxDillon >= flash && maxDillon >= blackFlash){
     ten.style.display = "block";}
-     
+    else if (demon >= thor && demon >= maxDillon && demon >= flash && demon >= blackFlash) {
+        eleven.style.display = "block"
+    }
 });
